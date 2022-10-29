@@ -1,4 +1,4 @@
 # EXERION
-KiCAD PCB schematic
+KiCAD PCB schematic & FPGA core for the MiSTer platform
 
-This project will hopefully lead to a FPGA Core of the Jaleco game 'Exerion'.  This is my first foray into FPGA programming, so it is unknown at this point what the future holds.
+This was my first foray into FPGA programming and it has proven to be a very rewarding process.
