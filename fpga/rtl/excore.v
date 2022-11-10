@@ -79,7 +79,7 @@ wire spclk1_10MHZ,spclk2_6MHZ,spclk3_3MHZ,spclk4_6BMHZ;
 wire PUR = 1'b1;
 wire H4CA;
 
-reg nVDSP, nHDSP; //vertical & horizontal display
+
 
 wire U9M_B_nq,U9M_B_q;
 
@@ -249,7 +249,7 @@ ls107 U3B_A(
 
 //coin input
 wire nCOIN;
-reg wait_n;
+
 
 //coin
 ttl_7474 #(.BLOCKS(1), .DELAY_RISE(0), .DELAY_FALL(0)) U1D_A (
@@ -373,10 +373,15 @@ always @(posedge bgclk_3) begin
 										(!Z80B_RD & !BG_VDSP)					? ({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,nVDSP,SNHI}):
 																						8'b00000000;
 
-	nHDSP <= H_BLANK;
-	nVDSP <= V_BLANK;
-	wait_n <= !pause;
+//	nHDSP <= H_BLANK;
+//	nVDSP <= V_BLANK;
+//	wait_n <= !pause;
 end
+
+wire wait_n = !pause;
+wire nVDSP = V_BLANK; 
+wire nHDSP = H_BLANK; //vertical & horizontal display
+
 
 
 wire SLSE;
