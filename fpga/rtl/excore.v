@@ -375,7 +375,7 @@ always @(posedge bgclk_3) begin
 
 //	nHDSP <= H_BLANK;
 //	nVDSP <= V_BLANK;
-//	wait_n <= !pause;
+//	wait_n <= !pause; 
 end
 
 wire wait_n = !pause;
